@@ -49,6 +49,9 @@ local plugins = {
 	"kyazdani42/nvim-web-devicons",
 	"kyazdani42/nvim-tree.lua",
 
+	-- Toggleterm
+	"akinsho/toggleterm.nvim",
+
 	-- Tabline
 	{
 		"romgrk/barbar.nvim",
