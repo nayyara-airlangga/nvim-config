@@ -45,6 +45,7 @@ local plugins = {
 	"nvim-lua/plenary.nvim",
 	"windwp/nvim-autopairs",
 	"folke/trouble.nvim",
+	"goolord/alpha-nvim",
 
 	-- Nvimtree
 	"kyazdani42/nvim-web-devicons",
