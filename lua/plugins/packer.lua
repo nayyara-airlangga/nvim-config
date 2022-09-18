@@ -46,6 +46,7 @@ local plugins = {
 	"windwp/nvim-autopairs",
 	"folke/trouble.nvim",
 	"goolord/alpha-nvim",
+	"lukas-reineke/indent-blankline.nvim",
 
 	-- Nvimtree
 	"kyazdani42/nvim-web-devicons",
