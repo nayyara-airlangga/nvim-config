@@ -24,8 +24,6 @@ map("n", "<C-j>", "<C-w>j", opts)
 map("n", "<C-k>", "<C-w>k", opts)
 map("n", "<C-l>", "<C-w>l", opts)
 
-map("n", "<leader>e", ":Lex 25<CR>", opts)
-
 -- Resize with arrows
 map("n", "<C-Up>", ":resize -2<CR>", opts)
 map("n", "<C-Down>", ":resize +2<CR>", opts)
@@ -75,3 +73,5 @@ map("n", "<leader>fb", "<cmd>Telescope buffers<cr>", opts)
 map("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", opts)
 map("n", "<leader>fl", "<cmd>Telescope git_files<cr>", opts)
 
+-- Nvimtree
+map("n", "<leader>e", ":NvimTreeToggle<cr>", opts)

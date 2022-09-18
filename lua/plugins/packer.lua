@@ -45,6 +45,10 @@ local plugins = {
   "nvim-lua/plenary.nvim",
   "windwp/nvim-autopairs",
 
+  -- Nvimtree
+  "kyazdani42/nvim-web-devicons",
+  "kyazdani42/nvim-tree.lua",
+
   -- Comments
   "numToStr/Comment.nvim",
   "JoosepAlviste/nvim-ts-context-commentstring",
