@@ -80,6 +80,7 @@ local plugins = {
   "neovim/nvim-lspconfig",
   "williamboman/nvim-lsp-installer",
   "tamago324/nlsp-settings.nvim", -- language server settings defined in json for
+  "jose-elias-alvarez/null-ls.nvim",
 
   -- Telescope
   "nvim-telescope/telescope.nvim",
