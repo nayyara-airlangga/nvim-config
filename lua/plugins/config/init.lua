@@ -1,3 +1,6 @@
 require("plugins.config.nvim-cmp")
 require("plugins.config.lsp")
 require("plugins.config.telescope")
+require("plugins.config.treesitter")
+require("plugins.config.autopairs")
+require("plugins.config.comment")

@@ -43,6 +43,11 @@ local plugins = {
   "wbthomason/packer.nvim",
   "nvim-lua/popup.nvim",
   "nvim-lua/plenary.nvim",
+  "windwp/nvim-autopairs",
+
+  -- Comments
+  "numToStr/Comment.nvim",
+  "JoosepAlviste/nvim-ts-context-commentstring",
 
   -- Colorschemes
   "rafi/awesome-vim-colorschemes",
@@ -64,11 +69,19 @@ local plugins = {
   -- LSP
   "neovim/nvim-lspconfig",
   "williamboman/nvim-lsp-installer",
+  "tamago324/nlsp-settings.nvim", -- language server settings defined in json for
 
   -- Telescope
   "nvim-telescope/telescope.nvim",
   "nvim-telescope/telescope-media-files.nvim",
 
+  -- Treesitter
+  {
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
+  },
+  "p00f/nvim-ts-rainbow",
+  "nvim-treesitter/playground",
 }
 
 -- Install your plugins here
