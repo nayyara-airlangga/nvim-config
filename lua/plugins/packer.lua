@@ -49,6 +49,12 @@ local plugins = {
   "kyazdani42/nvim-web-devicons",
   "kyazdani42/nvim-tree.lua",
 
+  -- Tabline
+  {
+    "romgrk/barbar.nvim",
+    requires = { "kyazdani42/nvim-web-devicons" },
+  },
+
   -- Comments
   "numToStr/Comment.nvim",
   "JoosepAlviste/nvim-ts-context-commentstring",

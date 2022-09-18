@@ -98,3 +98,36 @@ nvim_tree.setup {
     tree_width = 30,
   },
 }
+
+local events_ok, nvim_tree_events = pcall(require, 'nvim-tree.events')
+if not events_ok then
+  return
+end
+
+local bufferline_ok, bufferline_state = pcall(require, 'bufferline.state')
+if not bufferline_ok then
+  return
+end
+
+local view_ok, nvim_tree_view = pcall(require, 'nvim-tree.view')
+if not view_ok then
+  return
+end
+
+local function get_tree_size()
+  return nvim_tree_view.View.width
+end
+
+local username = os.getenv("USERNAME")
+
+nvim_tree_events.subscribe('TreeOpen', function()
+  bufferline_state.set_offset(get_tree_size(), username)
+end)
+
+nvim_tree_events.subscribe('Resize', function()
+  bufferline_state.set_offset(get_tree_size(), username)
+end)
+
+nvim_tree_events.subscribe('TreeClose', function()
+  bufferline_state.set_offset(0)
+end)
