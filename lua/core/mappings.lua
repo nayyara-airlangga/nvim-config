@@ -75,6 +75,14 @@ map("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 -- Null-ls
 map("n", "<leader>f", ":Format<cr>", opts)
 
+-- Trouble
+map("n", "<leader>xx", ":TroubleToggle<cr>", opts)
+map("n", "<leader>xw", ":TroubleToggle workspace_diagnostics<cr>", opts)
+map("n", "<leader>xd", ":TroubleToggle document_diagnostics<cr>", opts)
+map("n", "<leader>xl", ":TroubleToggle loclist<cr>", opts)
+map("n", "<leader>xq", ":TroubleToggle quickfix<cr>", opts)
+map("n", "gR", ":TroubleToggle lsp_references<cr>", opts)
+
 -- Bufferline
 -- Move to previous/next
 map("n", "<A-,>", "<Cmd>BufferPrevious<CR>", opts)
