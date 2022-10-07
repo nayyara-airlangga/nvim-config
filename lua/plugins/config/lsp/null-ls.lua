@@ -15,6 +15,7 @@ null_ls.setup({
 		formatting.black.with({ extra_args = { "--skip-string-normalization" } }),
 		formatting.gofmt,
 		formatting.goimports,
+		formatting.sqlfluff.with({ extra_args = { "--dialect", "postgres" } }),
 		-- formatting.yapf,
 		formatting.stylua,
 		--[[ diagnostics.flake8, ]]
