@@ -13,13 +13,20 @@ dashboard.section.header.val = {
 	[[ \/_/\/_/\/____/\/___/  \/__/    \/_/\/_/\/_/\/_/]],
 }
 
+local config_path = ""
+if package.config:sub(1, 1) == "/" then
+	config_path = "~/.config/nvim"
+else
+	config_path = "~/AppData/Local/nvim"
+end
+
 dashboard.section.buttons.val = {
 	dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
 	dashboard.button("e", "  New file", ":ene <BAR> startinsert <CR>"),
 	dashboard.button("p", "  Find project", ":Telescope projects <CR>"),
 	dashboard.button("r", "  Recently used files", ":Telescope oldfiles <CR>"),
 	dashboard.button("t", "  Find text", ":Telescope live_grep <CR>"),
-	dashboard.button("c", "  Configuration", ":e ~/AppData/Local/nvim <CR>"),
+	dashboard.button("c", "  Configuration", ":e " .. config_path .. " <CR>"),
 	dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
 }
 
