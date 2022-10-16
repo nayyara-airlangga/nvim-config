@@ -3,6 +3,8 @@ if not toggleterm_ok then
 	return
 end
 
+local sys = require("utils.sys")
+
 toggleterm.setup({
 	size = 10,
 	open_mapping = [[<c-\>]],
@@ -15,7 +17,7 @@ toggleterm.setup({
 	persist_size = true,
 	direction = "horizontal",
 	close_on_exit = true,
-	shell = vim.o.shell,
+	shell = sys.get_shell(),
 	float_opts = {
 		border = "curved",
 		winblend = 0,
