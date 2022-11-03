@@ -90,6 +90,10 @@ local plugins = {
 	"williamboman/nvim-lsp-installer",
 	"tamago324/nlsp-settings.nvim", -- language server settings defined in json for
 	"jose-elias-alvarez/null-ls.nvim",
+	{ "akinsho/flutter-tools.nvim", requires = "nvim-lua/plenary.nvim" },
+
+	-- Debugger
+	"mfussenegger/nvim-dap",
 
 	-- Telescope
 	"nvim-telescope/telescope.nvim",
