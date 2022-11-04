@@ -3,6 +3,8 @@ if not flutter_tools_ok then
 	return
 end
 
+local on_attach = require("plugins.config.lsp.handlers").on_attach
+
 flutter_tools.setup({
 	ui = {
 		border = "rounded",
@@ -14,13 +16,11 @@ flutter_tools.setup({
 			device = true,
 		},
 	},
-	flutter_lookup_cmd = "dirname $(which flutter)",
 	debugger = { -- integrate with nvim dap + install dart code debugger
 		enabled = false,
 		run_via_dap = false, -- use dap instead of a plenary job to run flutter apps
 		exception_breakpoints = {},
 	},
-	fvm = false, -- takes priority over path, uses <workspace>/.fvm/flutter_sdk if enabled
 	widget_guides = {
 		enabled = false,
 	},
@@ -42,6 +42,7 @@ flutter_tools.setup({
 		auto_open = false, -- if true this will open the outline automatically when it is first populated
 	},
 	lsp = {
+		on_attach = on_attach,
 		color = { -- show the derived colours for dart variables
 			enabled = false, -- whether or not to highlight color variables at all, only supported on flutter >= 2.10
 			background = false, -- highlight the background
