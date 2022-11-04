@@ -11,6 +11,11 @@ lsp_installer.on_server_ready(function(server)
 		capabilities = require("plugins.config.lsp.handlers").capabilities,
 	}
 
+	if server.name == "dartls" then
+		local dartls_opts = require("plugins.config.lsp.settings.dartls")
+		opts = vim.tbl_deep_extend("force", dartls_opts, opts)
+	end
+
 	if server.name == "jdtls" then
 		local jdtls_opts = require("plugins.config.lsp.settings.jdtls")
 		opts = vim.tbl_deep_extend("force", jdtls_opts, opts)
