@@ -1,4 +1,4 @@
-local colorscheme = "dracula"
+local colorscheme = "onedark"
 
 local colorscheme_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 
