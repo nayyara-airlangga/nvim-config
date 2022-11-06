@@ -20,4 +20,12 @@ M.config_path = function()
 	return "~/.config/nvim"
 end
 
+M.current_user = function ()
+  if M.os_type() == "win" then
+    return os.getenv("USERNAME")
+  end
+
+  return os.getenv("USER")
+end
+
 return M

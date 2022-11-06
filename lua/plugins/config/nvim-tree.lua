@@ -100,7 +100,9 @@ local function get_tree_size()
 	return nvim_tree_view.View.width
 end
 
-local username = os.getenv("USERNAME")
+local sys = require("utils.sys")
+
+local username = sys.current_user()
 
 nvim_tree_events.subscribe("TreeOpen", function()
 	bufferline_state.set_offset(get_tree_size(), username)
