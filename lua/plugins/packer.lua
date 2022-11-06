@@ -109,6 +109,12 @@ local plugins = {
 
 	-- Git
 	"lewis6991/gitsigns.nvim",
+
+  -- Markdown
+  {
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+  },
 }
 
 -- Install your plugins here
