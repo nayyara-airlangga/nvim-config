@@ -92,6 +92,7 @@ local plugins = {
 	"williamboman/mason-lspconfig.nvim",
 	"jose-elias-alvarez/null-ls.nvim",
 	"mfussenegger/nvim-jdtls",
+	{ "https://gitlab.com/schrieveslaach/sonarlint.nvim", as = "sonarlint.nvim" },
 	{ "akinsho/flutter-tools.nvim", requires = "nvim-lua/plenary.nvim" },
 
 	-- Debugger

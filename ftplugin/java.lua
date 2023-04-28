@@ -9,9 +9,7 @@ if not jdtls_ok then
 	return
 end
 
-local os_type = function()
-	return package.config:sub(1, 1) == "\\" and "win" or "unix"
-end
+local os_type = require("utils.sys").os_type
 
 local jdtls_path = os_type() == "win" and vim.fn.stdpath("data") .. "\\mason\\packages\\jdtls"
 	or vim.fn.stdpath("data") .. "/mason/packages/jdtls"

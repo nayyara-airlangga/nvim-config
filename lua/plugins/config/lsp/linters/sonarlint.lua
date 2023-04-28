@@ -1,7 +1,16 @@
-return {
+local status_ok, sonarlint = pcall(require, "sonarlint")
+if not status_ok then
+	return
+end
+
+local os_type = require("utils.sys").os_type
+local sonarlint_path = os_type() == "win" and vim.fn.stdpath("data") .. "\\mason\\bin\\sonarlint-language-server.cmd"
+	or vim.fn.stdpath("data") .. "/mason/bin/sonarlint-language-server.cmd"
+
+sonarlint.setup({
 	server = {
 		cmd = {
-			"sonarlint-language-server",
+			sonarlint_path,
 			-- Ensure that sonarlint-language-server uses stdio channel
 			"-stdio",
 			"-analyzers",
@@ -16,4 +25,4 @@ return {
 		-- Requires nvim-jdtls, otherwise an error message will be printed
 		"java",
 	},
-}
+})

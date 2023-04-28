@@ -46,11 +46,6 @@ mason_lspconfig.setup_handlers({
 			opts = vim.tbl_deep_extend("force", html_opts, opts)
 		end
 
-		if server == "sonarlint-language-server" then
-			local sonarlint_opts = require("plugins.config.lsp.settings.sonarlint")
-			opts = vim.tbl_deep_extend("force", sonarlint_opts, opts)
-		end
-
 		if server ~= "jdtls" then
 			-- This setup() function is exactly the same as lspconfig's setup function.
 			-- Refer to https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
