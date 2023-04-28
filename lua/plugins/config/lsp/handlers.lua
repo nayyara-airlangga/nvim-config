@@ -90,7 +90,7 @@ M.on_attach = function(client, bufnr)
 		or client.name == "sumneko_lua"
 		or client.name == "gopls"
 		or client.name == "sqls"
-		or client.name == "pyright"
+		or client.name == "pylsp"
 	then
 		client.server_capabilities.documentFormattingProvider = false
 		vim.cmd("autocmd BufWritePre <buffer> Format")
