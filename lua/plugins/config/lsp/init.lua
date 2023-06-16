@@ -6,4 +6,5 @@ end
 require("plugins.config.lsp.installer")
 require("plugins.config.lsp.handlers").setup()
 require("plugins.config.lsp.null-ls")
-require("plugins.config.lsp.linters.sonarlint")
+require("plugins.config.lsp.linters")
+require("plugins.config.lsp.formatters")

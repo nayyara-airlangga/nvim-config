@@ -92,6 +92,7 @@ local plugins = {
 	"williamboman/mason-lspconfig.nvim",
 	"jose-elias-alvarez/null-ls.nvim",
 	"mfussenegger/nvim-jdtls",
+	"MunifTanjim/prettier.nvim",
 	{ "https://gitlab.com/schrieveslaach/sonarlint.nvim", as = "sonarlint.nvim" },
 	{ "akinsho/flutter-tools.nvim", requires = "nvim-lua/plenary.nvim" },
 
@@ -124,7 +125,7 @@ local plugins = {
 
 -- Install your plugins here
 return packer.startup(function(use)
-	for k, v in pairs(plugins) do
+	for _, v in pairs(plugins) do
 		use(v)
 	end
 
