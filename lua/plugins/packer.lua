@@ -93,6 +93,7 @@ local plugins = {
 	"jose-elias-alvarez/null-ls.nvim",
 	"mfussenegger/nvim-jdtls",
 	"MunifTanjim/prettier.nvim",
+	"psf/black",
 	{ "https://gitlab.com/schrieveslaach/sonarlint.nvim", as = "sonarlint.nvim" },
 	{ "akinsho/flutter-tools.nvim", requires = "nvim-lua/plenary.nvim" },
 
